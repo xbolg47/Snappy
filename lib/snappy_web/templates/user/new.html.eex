@@ -1,0 +1,9 @@
+<div class="container">
+<h2>New User</h2> 
+<div class="form-group">
+
+<%= render "form.html", Map.put(assigns, :action, user_path(@conn, :create)) %>
+
+<span><%= link "Back", to: user_path(@conn, :index), class: "btn btn-dark my-2 my-sm-0" %></span>
+</div>
+</div>

@@ -1,0 +1,42 @@
+
+<div class="container">
+<h2>Show User</h2>
+
+<table class="table">
+  <thead class="thead-dark"> 
+    <tr>
+      <th scope="col" class="h5">Username:</th>
+      <th scope="col" class="h5">Email:</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td><%= @user.username %></td>
+      <td><%= @user.email %></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- <ul>
+
+  <li>
+    <h2><strong>Username:</strong></h2>
+    <h3> <%= @user.username %></h3>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </li>
+
+  <li>
+    <strong>Password hash:</strong>
+    <%= @user.password_hash %>
+  </li>
+
+</ul>
+-->
+<span><%= link "Edit", to: user_path(@conn, :edit, @user), class: "btn btn-dark my-2 my-sm-0" %></span>
+<span><%= link "Back", to: user_path(@conn, :index), class: "btn btn-dark my-2 my-sm-0" %></span>
+</div>
